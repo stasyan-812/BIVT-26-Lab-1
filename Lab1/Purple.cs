@@ -6,9 +6,10 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (Math.Sign(a) == Math.Sign(b) && Math.Sign(b) == Math.Abs(c))
+            {
+                answer = true;
+            }
 
             return answer;
         }
@@ -16,9 +17,10 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (Math.Max(a, b) % Math.Min(a, b) == 0)
+            {
+                answer = true;
+            }
 
             return answer;
         }
@@ -26,19 +28,18 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (Math.Pow(Math.Min(a, b), 2) == Math.Max(a, b) ||  Math.Pow(Math.Min(a, b), 3) == Math.Max(a, b))
+            {
+                answer = true;
+            }
 
             return answer;
         }
         public double Task4(double d, double f, double g)
         {
-            double answer = 0;
+            double answer = -f + 4 * d * g;
 
-            // code here
-
-            // end
+            
 
             return answer;
         }
@@ -46,9 +47,21 @@ namespace Lab1
         {
             double answer = 0;
 
-            // code here
-
-            // end
+            if (x <= -1)
+            {
+                answer = 1;
+            }
+            else
+            {
+                if (x <= 1)
+                {
+                    answer = -x;
+                }
+                else
+                {
+                    answer = -1;
+                }
+            }
 
             return answer;
         }
