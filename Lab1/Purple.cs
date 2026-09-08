@@ -6,7 +6,7 @@ namespace Lab1
         {
             bool answer = false;
 
-            if (Math.Sign(a) == Math.Sign(b) && Math.Sign(b) == Math.Abs(c))
+            if (Math.Sign(a) == Math.Sign(b) && Math.Sign(b) == Math.Sign(c))
             {
                 answer = true;
             }
@@ -16,8 +16,9 @@ namespace Lab1
         public bool Task2(int a, int b)
         {
             bool answer = false;
-
-            if (Math.Max(a, b) % Math.Min(a, b) == 0)
+            a = Math.Abs(a);
+            b = Math.Abs(b);
+            if ((Math.Min(a, b) != 0 && Math.Max(a, b) % Math.Min(a, b) == 0) || Math.Min(a, b) % Math.Max(a, b) == 0)
             {
                 answer = true;
             }
@@ -37,7 +38,7 @@ namespace Lab1
         }
         public double Task4(double d, double f, double g)
         {
-            double answer = -f + 4 * d * g;
+            double answer = f * f - 4 * d * g;
 
             
 
@@ -69,9 +70,10 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (Math.Sqrt(squareS * 2) <= 2 * Math.Sqrt(circleS / Math.PI))
+            {
+                answer = true;
+            }
 
             return answer;
         }
@@ -80,9 +82,42 @@ namespace Lab1
         {
             int answer = 0;
 
-            // code here
-
-            // end
+            if (s)
+            {
+                if (t)
+                {
+                    answer = 6;
+                }
+                else
+                {
+                    if (f)
+                    {
+                        answer = 10;
+                    }
+                    else
+                    {
+                        answer = 2;
+                    }
+                }
+            }
+            else
+            {
+                if (t)
+                {
+                    answer = 3;
+                }
+                else
+                {
+                    if (f)
+                    {
+                        answer = 5;
+                    }
+                    else
+                    {
+                        answer = 1;
+                    }
+                }
+            }
 
             return answer;
         }
@@ -91,9 +126,10 @@ namespace Lab1
             bool answer = false;
             const int bank = 10000;
 
-            // code here
-            
-            // end
+            if (!DateTime.IsLeapYear(year) && (pupils + 6) / 7 * salary + 5 * pupils <= bank)
+            {
+                answer = true;
+            }
 
             return answer;
         }
