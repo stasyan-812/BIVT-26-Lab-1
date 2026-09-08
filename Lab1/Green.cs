@@ -40,7 +40,7 @@
             int answer = 0;
 
             answer = new[] {a, b, c}.Max();
-
+            // там на пару коммитов назад я решил это через вложенные матх.макс'ы, я решил загуглить решение попрактичней
             return answer;
         }
         public double Task5(double x)
