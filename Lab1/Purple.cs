@@ -18,7 +18,9 @@ namespace Lab1
             bool answer = false;
             a = Math.Abs(a);
             b = Math.Abs(b);
-            if ((Math.Min(a, b) != 0 && Math.Max(a, b) % Math.Min(a, b) == 0) || Math.Min(a, b) % Math.Max(a, b) == 0)
+            int mi = Math.Min(a, b);
+            int ma = Math.Max(a, b);
+            if ((mi != 0 && ma % mi == 0) || mi % ma == 0)
             {
                 answer = true;
             }
@@ -28,8 +30,9 @@ namespace Lab1
         public bool Task3(int a, int b)
         {
             bool answer = false;
-
-            if (Math.Pow(Math.Min(a, b), 2) == Math.Max(a, b) ||  Math.Pow(Math.Min(a, b), 3) == Math.Max(a, b))
+            int mi = Math.Min(a, b);
+            int ma = Math.Max(a, b);
+            if (Math.Pow(mi, 2) == ma || Math.Pow(mi, 3) == ma)
             {
                 answer = true;
             }

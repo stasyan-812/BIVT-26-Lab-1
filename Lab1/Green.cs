@@ -28,7 +28,7 @@
         {
             bool answer = false;
 
-            if (a + b > Math.Abs(a) * 0.5 + Math.Abs(b) * 0.5)
+            if (a + b > (Math.Abs(a) + Math.Abs(b)) * 0.5)
             {
                 answer = true;
             }
@@ -39,7 +39,7 @@
         {
             int answer = 0;
 
-            answer = Math.Max(Math.Max(a, b), Math.Max(b, c));
+            answer = new[] {a, b, c}.Max();
 
             return answer;
         }
